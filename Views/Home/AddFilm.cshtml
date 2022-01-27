@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Add a film";
+}
+
+@model FilmCollection.Models.ApplicationResponse
+
+<h1>Add a new film</h1>
+<div>
+    <form method="post">
+        <label asp-for="FilmTitle">Film name:</label>
+        <input asp-for="FilmTitle" /> <br />
+
+        <label asp-for="FilmYear">Year:</label>
+        <input asp-for="FilmYear" /><br />
+
+        <label asp-for="FilmDirector">Directed by:</label>
+        <input asp-for="FilmDirector" /><br />
+
+        <label asp-for="FilmRating">Film rating:</label>
+        <input asp-for="FilmRating" /><br />
+
+        <label asp-for="Category">Category:</label>
+        <select asp-for="Category">
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select><br />
+
+        <label asp-for="Edited">Edited:</label>
+        <select asp-for="Edited">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br />
+
+        <label asp-for="LentTo">Lent to (leave empty if not):</label>
+        <input asp-for="LentTo" /><br />
+
+
+        <label asp-for="Notes">Notes:</label>
+        <input asp-for="Notes" /><br />
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
