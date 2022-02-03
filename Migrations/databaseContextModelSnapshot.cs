@@ -21,9 +21,8 @@ namespace FilmCollection.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Edited")
                         .HasColumnType("INTEGER");
@@ -52,13 +51,15 @@ namespace FilmCollection.Migrations
 
                     b.HasKey("FilmId");
 
-                    b.ToTable("responses");
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Responses");
 
                     b.HasData(
                         new
                         {
                             FilmId = 1,
-                            Category = "Action/Adventure",
+                            CategoryId = 1,
                             Edited = false,
                             FilmDirector = "George Lucas",
                             FilmRating = "PG",
@@ -70,7 +71,7 @@ namespace FilmCollection.Migrations
                         new
                         {
                             FilmId = 2,
-                            Category = "Action/Adventure",
+                            CategoryId = 1,
                             Edited = false,
                             FilmDirector = "Gore Verbinski",
                             FilmRating = "PG-13",
@@ -82,7 +83,7 @@ namespace FilmCollection.Migrations
                         new
                         {
                             FilmId = 3,
-                            Category = "Adventure/Romance",
+                            CategoryId = 2,
                             Edited = false,
                             FilmDirector = "Kevin Reynolds",
                             FilmRating = "PG-13",
@@ -91,6 +92,77 @@ namespace FilmCollection.Migrations
                             LentTo = "",
                             Notes = ""
                         });
+                });
+
+            modelBuilder.Entity("FilmCollection.Models.Category", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            CategoryName = "Adventure"
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            CategoryName = "Action"
+                        },
+                        new
+                        {
+                            CategoryId = 3,
+                            CategoryName = "Romance"
+                        },
+                        new
+                        {
+                            CategoryId = 4,
+                            CategoryName = "Comedy"
+                        },
+                        new
+                        {
+                            CategoryId = 5,
+                            CategoryName = "Horror"
+                        },
+                        new
+                        {
+                            CategoryId = 6,
+                            CategoryName = "Thriller"
+                        },
+                        new
+                        {
+                            CategoryId = 7,
+                            CategoryName = "Mystery"
+                        },
+                        new
+                        {
+                            CategoryId = 8,
+                            CategoryName = "Drama"
+                        },
+                        new
+                        {
+                            CategoryId = 9,
+                            CategoryName = "Fantasy"
+                        });
+                });
+
+            modelBuilder.Entity("FilmCollection.Models.ApplicationResponse", b =>
+                {
+                    b.HasOne("FilmCollection.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

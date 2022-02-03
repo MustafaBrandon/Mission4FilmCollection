@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Delete Film";
+}
+@model ApplicationResponse
+<h2>Delete @Model.FilmTitle? This cannot be undone.</h2>
+
+<form method="post" asp-action="Delete">
+    <button type="submit">Delete</button>
+    <a asp-controller="Home" asp-action="MovieList" class="btn btn-outline-primary">Cancel</a>
+    <input type="hidden" asp-for="FilmId"/>
+</form>

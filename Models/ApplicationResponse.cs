@@ -13,12 +13,17 @@ namespace FilmCollection.Models
         public int FilmId { get; set; }
         [Required]
         public string FilmTitle { set; get; }
+
         [Required]
-        public string Category{ set; get; }
+        public int CategoryId{ set; get; }
+        public Category Category { set; get; }
+
         [Required]
         public int FilmYear { set; get; }
+
         [Required]
-        public string FilmDirector { set; get; }
+        public string FilmDirector{ set; get; }
+
         [Required]
         public string FilmRating { get; set; }
 

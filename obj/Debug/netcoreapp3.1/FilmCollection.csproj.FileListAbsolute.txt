@@ -23,9 +23,7 @@ C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\FilmCollection.TagHelpers.output.cache
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\FilmCollection.RazorCoreGenerate.cache
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\FilmCollection.RazorTargetAssemblyInfo.cache
@@ -79,3 +77,5 @@ C:\Users\brand\source\repos\FilmCollection\FilmCollection\bin\Debug\netcoreapp3.
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\Home\Podcasts.cshtml.g.cs
+C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\Home\MovieList.cshtml.g.cs
+C:\Users\brand\source\repos\FilmCollection\FilmCollection\obj\Debug\netcoreapp3.1\Razor\Views\Home\Delete.cshtml.g.cs
